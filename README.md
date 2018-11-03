@@ -6,6 +6,8 @@
 
 This file does some visualization with the four datasets given. I have also chosen to create a new metric, which I have titled "Overall Wellness", which serves to better visualize and quantify the progress a patient is making. I have established this metric by simply combining the values of the four metrics given, and normalizing the results. In my opinion, this metric has the potential to be individualized for each patient by giving more weight to certain metrics in the calculating of the "Overall Wellness" metric.
 
+I also normalized the metrics given, and the user can change which metrics are graphed against the new metric I have created (indicated by comment in code, Line 74 and 75). 
+
 ### Part_1svm.py
 
 I have trained and tested a SVM using the `sklearn` package that can classify if a patient is stressed or not based on the values they have given for "sleep" and "mood". I decided that I would classify a patient as "Stressed" if they gave a value of stress that was greater than or equal to 4; any other value would classify them as "Not Stressed". I trained the classifier by using the data given, and tested the classifier by taking a portion of the data. The results are shown below:
