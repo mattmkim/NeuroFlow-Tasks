@@ -40,4 +40,4 @@ I used `sqlite3` to ultimately create a function that takes in a month (1 for Ja
      * matplotlib (3.0.0)
      * sklearn (0.0)
      * scipy (1.1.0)
-* Download python scripts 
+* Download python scripts and upload to PyCharm
