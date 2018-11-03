@@ -6,7 +6,7 @@
 
 This file does some visualization with the four datasets given. I have also chosen to create a new metric, which I have titled "Overall Wellness", which serves to better visualize and quantify the progress a patient is making. I have established this metric by simply combining the values of the four metrics given, and normalizing the results. In my opinion, this metric has the potential to be individualized for each patient by giving more weight to certain metrics in the calculating of the "Overall Wellness" metric.
 
-I also normalized the metrics given, and the user can change which metrics are graphed against the new metric I have created (indicated by comment in code, Line 74 and 75). 
+I also normalized the metrics given, and the user can change which metrics are graphed against the new metric I have created (indicated by comment in code, Line 74 and 75). The correlation coefficient between a given metric and the newly created metric is also found; the metric that is affecting the "Overall Wellness" metric the most can be determined. 
 
 ### Part_1svm.py
 
