@@ -1,6 +1,7 @@
 # code assumes that dates are stored in this format : YYYY-MM-DD
 
 import sqlite3 as sql
+import calender
 
 con = sql.connect("company.db")
 c = con.cursor()
@@ -32,8 +33,8 @@ c.execute("""DELETE FROM users
 
 months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
 
+total_results = []
 for count, month in enumerate(months):
-    totalresults = []
     c.execute("""SELECT 
                     (SELECT COUNT(*) 
                      FROM users 
@@ -44,7 +45,7 @@ for count, month in enumerate(months):
                      AND strftime("%m", users.created_at)=months[count]) as ExerciseUsers""")
     result = c.fetchone()
     number_of_rows = result[0]
-    totalresults.append(number_of_rows)
+    total_results.append(number_of_rows)
 
 # totalresults list contains 12 tuples, with first value in each representing
 # the total amount of users that signed up that month, and second value representing
@@ -54,7 +55,7 @@ for count, month in enumerate(months):
 # can use this function to print out the percentage of users that have completed an exercise in the first month of
 # signing up
 def percent_of_users(month):
-    x, y = totalresults[month - 1]
+    x, y = total_results[month - 1]
     print("The 2018 " + calender.month_name[month] + " cohort has " + str(x / y) + "% of users completing an "
                                                                                    "exercise in the first month")
 
