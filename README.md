@@ -34,7 +34,7 @@ I used `sqlite3` to ultimately create a function that takes in a month (1 for Ja
 
 * Download Python 3.7.1
 * Download a Python IDE (preferably PyCharm)
-* Install the necessary packages 
+* Install the necessary packages in the IDE
      * pandas (0.23.4)
      * numpy (1.15.2)
      * matplotlib (3.0.0)
