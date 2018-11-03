@@ -99,10 +99,10 @@ def plot_norm_data():
 
 
 plot_norm_data()
-plt.plot(metric["Day"], metric["Metric"], marker="o", linewidth=0, color="blue", markersize=5)
+plt.plot(metric["Day"], metric["Metric"], marker="o", linewidth=0, color="blue", markersize=5, label="Overall Wellness")
 plt.plot(daysmooth, nmetricsmooth, color="blue")
 plt.ylim(-0.1, 1.2)
-plt.title("Normalized Metric", loc="center")
+plt.title("Overall Wellness", loc="center")
 plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
 plt.xlabel("Day")
 plt.ylabel("Value")
